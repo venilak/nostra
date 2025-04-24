@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nostra</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+</head>
+<body class="font-serif">
+
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between p-3">
+    <h1 class="font-bold text-2xl"><i class="fa-brands fa-bluesky"></i> Nostra</h1>
+    <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden cursor-pointer">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+    </svg>
+    <ul class="hidden md:flex gap-10">
+      <li><a class="hover:underline hover:text-blue-900" href="index.html">Home</a></li>
+      <li><a class="hover:underline hover:text-blue-900" href="new-arrival.html">New Arrival</a></li>
+      <li><a class="hover:underline hover:text-blue-900" href="most-wanted.html">Most Wanted</a></li>
+      <li><a class="hover:underline hover:text-blue-900" href="collections.html">Collections</a></li>
+      <li><a class="hover:underline hover:text-blue-900" href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Side Nav -->
+  <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-500 h-full w-1/2 right-[-50%] md:hidden">
+    <div class="text-right p-5">
+      <p id="closenav" class="inline cursor-pointer font-bold text-lg">X</p>
+    </div>
+    <ul class="flex flex-col gap-10 items-center text-gray-600">
+      <li><a class="hover:underline hover:text-blue-900" href="index.html">Home</a></li>
+      <li><a class="hover:underline hover:text-blue-900" href="index.html#new-arrival">New Arrival</a></li>
+      <li><a class="hover:underline hover:text-blue-900" href="index.html#mostwanted">Most Wanted</a></li>
+      <li><a class="hover:underline hover:text-blue-900" href="collections.html">Collections</a></li>
+      <li><a class="hover:underline hover:text-blue-900" href="contact.html">Contact</a></li>
+    </ul>
+  </section>
+
+  <div class="flex">
+    <!-- Filter Sidebar -->
+    <section class="p-3 pr-6 border-r-2 border-blue-600">
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Occasion</h2>
+        <label><input type="checkbox" name="occasion" value="Summer" /> Summer</label><br />
+        <label><input type="checkbox" name="occasion" value="Party" /> Party</label><br />
+        <label><input type="checkbox" name="occasion" value="Beach" /> Beach</label>
+      </div>
+      <br />
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Colors</h2>
+        <label><input type="checkbox" name="color" value="Red" /> Red</label><br />
+        <label><input type="checkbox" name="color" value="Blue" /> Blue</label><br />
+        <label><input type="checkbox" name="color" value="Brown" /> Brown</label><br />
+        <label><input type="checkbox" name="color" value="White" /> White</label>
+      </div>
+      <br />
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Arrivals</h2>
+        <label><input type="checkbox" name="arrival" value="New" /> New</label><br />
+        <label><input type="checkbox" name="arrival" value="Old" /> Old</label>
+      </div>
+    </section>
+
+    <!-- Main Product Content -->
+    <div class="flex-1 p-5">
+      <div class="relative mb-5">
+        <input type="text" placeholder="Search" class="w-full border border-blue-200 rounded pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+          <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="w-56" data-occasion="Summer" data-color="Red" data-arrival="New">
+          <img src="./images/f1.jpg" class="w-56 h-60 mx-auto rounded" alt="Floral summer shirt"/>
+          <h3>Floral summer shirt</h3>
+          <p>₹300</p>
+        </div>
+        <div class="w-56" data-occasion="Party" data-color="Brown" data-arrival="New">
+          <img src="./images/f2.jpg" class="w-56 h-60 rounded" alt="Party floral shirt"/>
+          <h3>Floral summer shirt</h3>
+          <p>₹300</p>
+        </div>
+        <div class="w-56" data-occasion="Beach" data-color="Blue" data-arrival="Old">
+          <img src="./images/f8.jpg" class="w-56 h-60 rounded" alt="Beach casual shirt"/>
+          <h3>Casual shirts</h3>
+          <p>₹300</p>
+        </div>
+        <div class="w-56" data-occasion="Summer" data-color="White" data-arrival="New">
+          <img src="./images/f3.jpg" class="w-56 h-60 rounded" alt="White floral shirt"/>
+          <h3>Floral shirt</h3>
+          <p>₹300</p>
+        </div>
+        <div class="w-56" data-occasion="Party" data-color="Red" data-arrival="Old">
+          <img src="./images/f9.jpg" class="w-56 h-60 rounded" alt="Printed party shirt"/>
+          <h3>Printed shirt</h3>
+          <p>₹300</p>
+        </div>
+        <div class="w-56" data-occasion="Party" data-color="Brown" data-arrival="New">
+          <img src="./images/n9.jpg" class="w-56 h-60 rounded" alt="Beach shirt"/>
+          <h3>Beach shirt</h3>
+          <p>₹300</p>
+        </div>
+        <div class="w-56" data-occasion="Beach" data-color="White" data-arrival="New">
+          <img src="./images/f6.jpg" class="w-56 h-60 rounded" alt="White beach shirt"/>
+          <h3>Party shirt</h3>
+          <p>₹300</p>
+        </div>
+        <div class="w-56" data-occasion="Summer" data-color="Blue" data-arrival="Old">
+          <img src="./images/f7.jpg" class="w-56 h-60 rounded" alt="Floral pants"/>
+          <h3>Floral pants</h3>
+          <p>₹300</p>
+        </div>
+        <div class="w-56" data-occasion="Summer" data-color="Brown" data-arrival="Old">
+          <img src="./images/n4.jpg" class="w-56 h-60 rounded" alt="Half sleeves shirt"/>
+          <h3>Half sleeves shirt</h3>
+          <p>₹300</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Newsletter -->
+  <section class="text-center mt-10">
+    <h2 class="text-3xl font-bold">Join our Newsletter</h2>
+    <p class="text-2xl font-semibold">Signup for our email newspaper to get exclusive discounts, updates, and more</p>
+    <input type="text" class="border border-black m-3 rounded p-2 w-4/5 sm:w-3/5" placeholder="Enter your email"/><br />
+    <button class="bg-black text-white px-6 py-3 rounded text-xl">Subscribe <i class="fa-solid fa-arrow-right"></i></button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="p-5 bg-blue-200 mt-5">
+    <h1 class="font-extrabold text-4xl">Nostra</h1>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 font-semibold mt-5">
+      <div>
+        <p>EXPERIENCE Nostra APP ON MOBILE</p>
+        <img class="w-32 rounded-3xl my-2" src="./images/footer1.png" alt="App download"/>
+        <img class="w-32 rounded-3xl my-2" src="./images/footer3.png" alt="App download"/>
+        <p>@2025 Nostra.com</p>
+        <p>&copy; Nostra</p>
+      </div>
+      <div>
+        <img class="w-10" src="./images/original.png" alt="Original guarantee"/>
+        <p><span class="font-bold">100% ORIGINAL </span> Guarantee for all products at nostra.com</p>
+        <img class="w-10 mt-3" src="./images/14-days.png" alt="14 days return"/>
+        <p>Return within 14 days of receiving your order</p>
+      </div>
+      <div class="p-5">
+        <p class="font-medium">Keep in Touch</p>
+        <img class="mix-blend-multiply mt-2" src="./images/social.jpg" alt="Social media links"/>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Menu toggle -->
+  <script>
+    const menuIcon = document.getElementById("menuicon");
+    const sidenav = document.getElementById("sidenav");
+    const closeNav = document.getElementById("closenav");
+
+    menuIcon.addEventListener("click", () => {
+      sidenav.style.right = "0";
+    });
+
+    closeNav.addEventListener("click", () => {
+      sidenav.style.right = "-50%";
+    });
+  </script>
+
+  <script src="products.js"></script>
+</body>
+</html>
