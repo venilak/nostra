@@ -47,3 +47,15 @@ const images = document.querySelectorAll('.fade-image');
     current = (current + 1) % images.length;
     showImage(current);
   });
+  function moveToSlide(slideIndex) {
+    const container = document.getElementById('cardContainer');
+    const slideWidth = container.querySelector('div').offsetWidth + 16;
+    container.style.transform = `translateX(-${slideWidth * 4 * slideIndex}px)`;
+ 
+
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach((dot, index) => {
+    dot.classList.toggle('bg-black', index === slideIndex);
+    dot.classList.toggle('bg-gray-400', index !== slideIndex);
+  });
+}
